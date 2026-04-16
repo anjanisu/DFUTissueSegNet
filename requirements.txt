@@ -1,0 +1,15 @@
+torch
+torchvision
+albumentations
+opencv-python
+numpy
+segmentation-models-pytorch
+matplotlib
+pandas
+Pillow
+scikit-learn
+scipy
+pretrainedmodels
+efficientnet-pytorch
+timm
+ipykernel

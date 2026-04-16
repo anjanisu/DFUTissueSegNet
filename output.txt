@@ -1,0 +1,26 @@
+# Phase 1: Supervised Training
+- Training completed. Best validation accuracy: 95.77%, IoU: 84.29%
+- Best model saved at: Outputs/checkpoints/MiT+pscse_mit_b3_sup/best_model.pth
+
+# Phase 2: Pseudo-Label Generation
+- Processed 600 unlabeled images from DFUTissue/Unlabeled.
+- Pseudo-labels and palette predictions successfully saved to Outputs/Predictions/Phase1 and Outputs/Predictions_Palette/Phase1.
+
+# Note: Automatic Execution 
+- A Master Pipeline is actively running 10 epochs over 5 distinct runs for Semisupervised Phases. Metrics will append here autonomously.
+
+# Phase 3: Semi-Supervised Training Phase 1
+- Tested 5 iterations of randomly selected 50 pseudo-labeled images with 78 labeled images.
+- Best Run: 2 with validation loss: 1.9109
+- Evaluation of Phase 3 on Test Set:
+     Accuracy: 0.9823
+     F1-score: 0.9647
+     IoU: 0.9328
+
+# Phase 4 & 5: Semi-Supervised Training Phase 2
+- Tested 5 iterations of randomly selected 50 pseudo-labeled images (from Phase 2 pool) + 50 Phase 1 + 78 labeled images.
+- Best Run: 2 with validation loss: 1.8730
+- Evaluation of Phase 2 on Test Set:
+     Accuracy: 0.9839
+     F1-score: 0.9679
+     IoU: 0.9388
